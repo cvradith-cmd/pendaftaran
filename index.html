@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Pendaftaran</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header class="form-header">
+      <h1>Form Pendaftaran</h1>
+      <p>Isi data diri Anda dengan lengkap dan benar. Kolom bertanda <span class="req">*</span> wajib diisi.</p>
+    </header>
+
+    <form action="#" method="post" class="form">
+
+      <fieldset>
+        <legend>Data Pribadi</legend>
+
+        <div class="field">
+          <label for="nama">Nama Lengkap <span class="req">*</span></label>
+          <input type="text" id="nama" name="nama" placeholder="Contoh: Budi Santoso" required>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="tempat">Tempat Lahir <span class="req">*</span></label>
+            <input type="text" id="tempat" name="tempat" placeholder="Contoh: Jakarta" required>
+          </div>
+          <div class="field">
+            <label for="tgl">Tanggal Lahir <span class="req">*</span></label>
+            <input type="date" id="tgl" name="tgl" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <span class="label">Jenis Kelamin <span class="req">*</span></span>
+          <div class="options">
+            <label class="option"><input type="radio" name="gender" value="L" required> Laki-laki</label>
+            <label class="option"><input type="radio" name="gender" value="P"> Perempuan</label>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Kontak</legend>
+
+        <div class="row">
+          <div class="field">
+            <label for="email">Email <span class="req">*</span></label>
+            <input type="email" id="email" name="email" placeholder="nama@email.com" required>
+          </div>
+          <div class="field">
+            <label for="hp">No. HP / WhatsApp <span class="req">*</span></label>
+            <input type="tel" id="hp" name="hp" placeholder="08xxxxxxxxxx" pattern="[0-9+]{9,15}" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="alamat">Alamat <span class="req">*</span></label>
+          <textarea id="alamat" name="alamat" rows="3" placeholder="Alamat lengkap" required></textarea>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Informasi Pendaftaran</legend>
+
+        <div class="row">
+          <div class="field">
+            <label for="program">Pilih Program <span class="req">*</span></label>
+            <select id="program" name="program" required>
+              <option value="" selected disabled>-- Pilih program --</option>
+              <option value="reguler">Reguler</option>
+              <option value="intensif">Intensif</option>
+              <option value="online">Online</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="pendidikan">Pendidikan Terakhir</label>
+            <select id="pendidikan" name="pendidikan">
+              <option value="">-- Pilih --</option>
+              <option>SMA/SMK</option>
+              <option>D3</option>
+              <option>S1</option>
+              <option>S2</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="password">Password <span class="req">*</span></label>
+          <input type="password" id="password" name="password" minlength="8" placeholder="Minimal 8 karakter" required>
+        </div>
+
+        <div class="field">
+          <label for="catatan">Catatan Tambahan</label>
+          <textarea id="catatan" name="catatan" rows="3" placeholder="Opsional"></textarea>
+        </div>
+      </fieldset>
+
+      <label class="option agree">
+        <input type="checkbox" name="setuju" required>
+        Saya menyatakan data yang diisi sudah benar dan menyetujui syarat &amp; ketentuan.
+      </label>
+
+      <div class="actions">
+        <button type="reset" class="btn btn-secondary">Reset</button>
+        <button type="submit" class="btn btn-primary">Daftar Sekarang</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>
